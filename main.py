@@ -1,19 +1,33 @@
-import os
-
 def main():
-    file_path = os.path.join("data", "frankenstein.txt")
-    
-    if not os.path.exists(file_path):
-        print(f"Error: {file_path} not found.")
-        return
+    art = r"""
+   ___  _       _     _   _ _                 _
+  / _ \| |__   | |__ (_) | | |__   __ _ _ __| | __
+ | | | | '_ \  | '_ \| | | | '_ \ / _` | '__| |/ /
+ | |_| | | | | | | | | | | | | | | (_| | |  |   <
+  \___/|_| |_| |_| |_|_| |_|_| |_|\__,_|_|  |_|\_\
 
-    try:
-        with open(file_path, "r", encoding="utf-8") as file:
-            for line in file:
-                print(line.strip())
-    except BrokenPipeError:
-        # Standard behavior when piping to a tool like head
-        pass
+
+            ______________________________
+           |                              |
+           |          OH HI MARK          |
+           |______________________________|
+                    ||            ||
+                    ||            ||
+             __________________________
+            /_________________________/|
+           |                         | |
+           |        _=,_             | |
+           |      o_/6 /#\           | |
+           |      \__ |##/           | |
+           |       ='|--\            | |
+           |         /   #'-.        | |
+           |         \#|_   _'-. /   | |
+           |          |/ \_( # |"    | |
+           |         C/ ,--___/      | |
+           |_________________________|/
+    """
+    print(art)
+
 
 if __name__ == "__main__":
     main()
